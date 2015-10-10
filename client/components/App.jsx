@@ -1,21 +1,18 @@
 App = React.createClass({
-  getInitialState: function() {
-    return {};
-  },
-
   render: function() {
     return (
-      <div className="app-container">
+      <div id="app-container">
 
-        <div className="flex-main-container">
+        <main role="main">
 
-          <div className="content-area">
-
-            <p>Hey I'm text isn't this great!</p>
-
+          <p className="title">Hi, I'm a title</p>
+          <span className="subtitle">This is a subtitle</span>
+          <div className="primary medium-box">
+            <span className="label">Box Label: </span>Isn't that neat?
           </div>
 
-        </div>
+        </main>
+
       </div>
     );
   }

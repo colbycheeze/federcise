@@ -1,16 +1,95 @@
-$white: #fff;
-$gray-1: #f0f2f4;
-$gray-2: #dfe9e9;
-$gray-3: #959f9f;
-$gray-4: #0d1111;
+// Google color pallete
+// http://www.google.com/design/spec/style/color.html#color-color-palette
 
-$teal-1: #41d6c3;
-$teal-2: #00b4a0;
-$teal-3: #008571;
+$white: #FFFFFF;
+$black: #000000;
 
-$purple-1: #ba8ff7;
-$orange-1: #ffa573;
+// Blue
+$primary: (
+  "light": #BBDEFB, //100
+  "base": #2196F3, //500
+  "dark": #1976D2 //700
+);
 
-$console-color: #272822;
-$snippet-menu: #454A4A;
+// Amber
+$accent: (
+  "light": #FFE57F, //100
+  "base": #FFD740, //200
+  "dark": #FFC400 //400
+);
 
+$white-font: (
+  "primary": rgba(255,255,255, 1),
+  "secondary": rgba(255,255,255, 0.7),
+  "hint": rgba(255,255,255, 0.3),
+  "disabled": rgba(255,255,255, 0.3)
+);
+
+$black-font: (
+  "primary": rgba(0,0,0,0.87),
+  "secondary": rgba(0,0,0,0.54),
+  "disabled": rgba(0,0,0,0.38),
+  "hint": rgba(0,0,0,0.38)
+);
+
+$colors: (
+  "primary": $primary,
+  "accent": $accent
+);
+
+$font-colors: (
+  "white": $white-font,
+  "black": $black-font
+);
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+@each $color_type, $color_value in $color {
+  @if $color_type == "base" {
+    .#{$color_name} {
+      background-color: $color_value !important;
+    }
+    .#{$color_name}-text {
+      color: $color_value !important;
+    }
+  }
+  @else {
+    .#{$color_name}.#{$color_type} {
+      background-color: $color_value !important;
+    }
+    .#{$color_name}-text.text-#{$color_type} {
+      color: $color_value !important;
+    }
+  }
+}
+}
+
+// usage: color("primary", "light")
+@function color($color, $type:"base") {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
+
+// usage: color("white", "secondary")
+@function font-color($color, $type:"primary") {
+  @if map-has-key($font-colors, $color) {
+    $curr_color: map-get($font-colors, $color);
+
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
