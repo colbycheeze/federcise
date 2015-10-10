@@ -1,0 +1,16 @@
+/**
+ * Disgusting, shameful, css hacks and unorganized mess goes here.
+ * It is up to you to clean this up or figure out how to "unhack" it
+ */
+
+//Throw this in when you just need to see an object show up somewhere
+.box-test {
+  background-color: tomato;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+}
+
+pre[class*="language-"] {
+  margin: 0;
+}

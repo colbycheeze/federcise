@@ -1,0 +1,40 @@
+.btn {
+  cursor: pointer;
+  outline: none;
+
+  width: 220px;
+  padding: $base-spacing;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid $teal-3;
+  background: transparent;
+
+  color: $teal-3;
+  font-weight: 700;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  i, img {
+    padding-right: $base-spacing;
+  }
+
+}
+
+.btn:after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+}
+
+.btn:active {
+  // top: 2px;
+}
+
+.btn:hover {
+  color: $white;
+  background: $teal-3;
+}
+

@@ -1,0 +1,29 @@
+.flex-main-container {
+  display: flex;
+
+  flex-flow: column;
+  align-items: stretch;
+
+  height: 100vh;
+}
+
+main {
+  flex: 1 0 75%;
+  display: flex;
+  flex-flow: column;
+
+  padding: $base-spacing * 2;
+
+  .description {
+    flex: 0 0 auto;
+    margin-top: $base-spacing * 2;
+    margin-bottom: $base-spacing * 2;
+  }
+}
+
+.content-area {
+  flex: 1 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
