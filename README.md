@@ -1,11 +1,11 @@
 # Federcise
 ## Learn Front End development by solving creative challenges and grading peers!
 
-** Getting Started **
-1. Install Meteor - curl https://install.meteor.com/ | sh
-2. Clone Repo
-3. type `meteor` in command line from project directory to start server
-4. Everything should be viewable at `http://localhost:3000`
+*Getting Started*
+  1. Install Meteor - curl https://install.meteor.com/ | sh
+  2. Clone Repo
+  3. type `meteor` in command line from project directory to start server
+  4. Everything should be viewable at `http://localhost:3000`
 
 [View project mockups & additional info](https://www.dropbox.com/sh/7hgn38d11kthwx9/AACynKPfVKJKgcWfMlnSuQCFa?dl=0)
 
