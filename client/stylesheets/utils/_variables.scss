@@ -1,3 +1,13 @@
+// Typography
 $base-spacing: 1rem;
-$base-line-height: 24px;
+$base-line-height: 1.5;
 
+// Media Query Ranges
+$small-screen: 600px;
+$medium-screen: 960px;
+$large-screen: 1140px;
+
+// Flow Text
+$range : $large-screen - $small-screen;
+$intervals: 20;
+$interval-size: $range / $intervals;

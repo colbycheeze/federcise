@@ -37,3 +37,12 @@ $button-color: color("accent");
   transition: all 0s;
 }
 
+@mixin button-colors($primary, $secondary) {
+  border: 2px solid $primary;
+  color: $primary;
+
+  &:hover {
+    color: $secondary;
+    background: $primary;
+  }
+}
