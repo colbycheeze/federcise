@@ -1,8 +1,13 @@
 html {
   font-family: 'Helvetica Neue';
+  color: font-color("black");
+
+  .jumbo {
+    font-size: $base-spacing * 4;
+  }
 
   h1, .title {
-    font-size: $base-spacing * 1.8;
+    font-size: $base-spacing * 2.2;
   }
 
   h2, .subtitle {

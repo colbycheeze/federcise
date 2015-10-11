@@ -1,3 +1,5 @@
+$button-color: color("accent");
+
 .btn {
   cursor: pointer;
   outline: none;
@@ -5,12 +7,12 @@
   padding: $base-spacing;
   display: inline-block;
   position: relative;
-  transition: all 0.3s;
+  transition: all 0.4s;
 
-  border: 2px solid color("accent");
+  border: 2px solid $button-color;
   background: transparent;
 
-  color: color("accent");
+  color: $button-color;
   font-weight: 700;
 
   i, img {
@@ -30,7 +32,8 @@
 }
 
 .btn:hover {
-  color: $white;
-  background: color("accent");
+  color: color("primary", "dark");
+  background: $button-color;
+  transition: all 0s;
 }
 
