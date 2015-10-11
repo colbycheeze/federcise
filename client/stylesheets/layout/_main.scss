@@ -1,8 +1,48 @@
 #app-container {
-  display: flex;
-  flex-flow: column;
+  min-height: 100vh;
 }
 
 main {
+  flex: 1 0 100%;
 
+  #hero {
+    background-color: color("primary");
+    height: 400px;
+    text-align: center;
+    color: font-color("white");
+
+    h1 {
+      line-height: $base-spacing * 5;
+      font-weight: 700;
+      letter-spacing: 2px;
+      transform:scale(1,1.1);
+    }
+
+    h2 {
+      font-weight: 400;
+    }
+
+    .btn {
+      margin-top: $base-spacing * 2;
+    }
+  }
+
+  #weekly-challenge {
+    padding: $base-spacing * 2;
+    background-color: color("primary", "light");
+    flex: 1 0 100%;
+
+    .challenge-text {
+      flex: 0 0 45%;
+    }
+    .challenge-img {
+      flex: 0 1 30%;
+      margin-right: $base-spacing * 2;
+
+      img {
+        width: 100%;
+        height: 5%; //lol arbitrary number
+      }
+    }
+  }
 }

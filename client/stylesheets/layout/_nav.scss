@@ -1,2 +1,23 @@
+$nav-bg-color: color("primary", "dark");
+
 nav {
+  background-color: $nav-bg-color;
+
+  .nav > li:first-child {
+    .btn {
+      padding-left: 0;
+    }
+  }
+
+  .btn {
+    border: none;
+    border-bottom: 2px solid $nav-bg-color;
+
+    &:hover {
+      background: transparent;
+      color: font-color("white");
+      border-bottom: 2px solid #FFF;
+    }
+  }
 }
+
