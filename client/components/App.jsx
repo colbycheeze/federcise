@@ -1,11 +1,11 @@
 App = React.createClass({
   render: function() {
     return (
-      <div id="app-container" className="column">
+      <div id="landing-wrapper">
 
         <Nav />
 
-        <Main />
+        {this.props.children}
 
         <Footer />
 

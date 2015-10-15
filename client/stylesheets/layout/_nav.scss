@@ -9,6 +9,10 @@ nav {
     }
   }
 
+  .active {
+    color: font-color("white");
+  }
+
   .btn {
     border: none;
     border-bottom: 2px solid $nav-bg-color;
@@ -16,8 +20,9 @@ nav {
     &:hover {
       background: transparent;
       color: font-color("white");
-      border-bottom: 2px solid #FFF;
+      // border-bottom: 2px solid #FFF;
     }
+
   }
 }
 

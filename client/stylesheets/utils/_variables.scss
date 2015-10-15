@@ -6,6 +6,9 @@ $base-line-height: 1.5;
 $small-screen: 600px;
 $medium-screen: 960px;
 $large-screen: 1140px;
+$small-and-up: "only screen and (min-width : #{$small-screen})";
+$medium-and-up: "only screen and (min-width : #{$medium-screen})";
+$large-and-up: "only screen and (min-width : #{$large-screen})";
 
 // Flow Text
 $range : $large-screen - $small-screen;
