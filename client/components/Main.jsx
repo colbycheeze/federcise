@@ -20,6 +20,7 @@ Main = React.createClass({
             <img src="img/sticky_nav_example.gif" alt="sticky nav example" />
           </div>
 
+          {/* <div className="challenge-text col grow-xs"> */}
           <div className="challenge-text col grow-xs">
             <h1> <Link to="/challenges">This Week's Challenge</Link></h1>
             <h2>Create a sticky nav on scroll</h2>
