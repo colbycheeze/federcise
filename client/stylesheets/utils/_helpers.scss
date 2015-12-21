@@ -3,6 +3,10 @@
 .right { float:right; }
 .clear { clear:both; height:1px; font-size:1px; line-height:1px; }
 
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
 //Throw these in when you just need to see an object show up somewhere
 .box-fill {
   width: 100%;

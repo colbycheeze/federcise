@@ -2,42 +2,40 @@
   min-height: 100vh;
 }
 
-main {
-  #hero {
-    background-color: color("primary");
-    height: 400px;
-    color: font-color("white");
+#hero {
+  background-color: color("primary");
+  height: 400px;
+  color: font-color("white");
 
-    .jumbo {
-      font-weight: 600;
-      letter-spacing: 2px;
-      font-size: $base-spacing * 4;
-      line-height: 1;
-    }
+  .jumbo {
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: $base-spacing * 4;
+    line-height: 1;
+  }
 
-    .btn {
-      margin-top: $base-spacing * 2;
+  .btn {
+    margin-top: $base-spacing * 2;
+  }
+}
+
+#weekly-challenge {
+  background-color: #FAFAFA;
+
+  a {
+    color: color("primary");
+    &:hover {
+      color: color("primary", "dark");
     }
   }
 
-  #weekly-challenge {
-    background-color: #FAFAFA;
+  .btn {
+    @include button-colors(color("primary", "dark"), white);
+    margin-top: $base-spacing;
+    padding: $base-spacing / 2;
 
-    a {
-      color: color("primary");
-      &:hover {
-        color: color("primary", "dark");
-      }
-    }
-
-    .btn {
-      @include button-colors(color("primary", "dark"), white);
-      margin-top: $base-spacing;
-      padding: $base-spacing / 2;
-
-      position: relative;
-      bottom: 0;
-      right: 0;
-    }
+    position: relative;
+    bottom: 0;
+    right: 0;
   }
 }
